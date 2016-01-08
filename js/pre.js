@@ -1,4 +1,4 @@
-var where = window.location.href;
+﻿var where = window.location.href;
 var what = where.split("#");
 what = what[1];
 
@@ -6,6 +6,7 @@ var title_a;
 var main_iframe;
 
 function b(){
+	if(what == undefined){history.go(-1);alert('请勿直接访问!');return;}
 	title_a = document.getElementById("title_a");
 	main_iframe = document.getElementById("main_iframe");
 	
