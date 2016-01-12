@@ -1,4 +1,4 @@
-h1{
+﻿h1{
 	background-image:linear-gradient(120deg, #155799, #159957);
 	height:200px;
 	font-size:50px;
@@ -25,4 +25,9 @@ body{
 code{
 	background-color:#f3f6fa;
 	font-family:Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.bdsharebuttonbox{
+	float:right;
+	margin:40 0 0 0;
 }
