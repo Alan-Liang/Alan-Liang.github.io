@@ -1,0 +1,133 @@
+﻿<!--This file created by The Geometer's Sketchpad 5.03-->
+<HTML><HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<TITLE>今天上午的数学最后一题</TITLE></HEAD><BODY>
+<H4 ALIGN=CENTER>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+/*
+	The following JavaScript code can detect whether the jar applet file is located in the same
+	directory as this file and, if not, display an error. This error can be useful for helping 
+	first-time JavaSketch authors troubleshoot a JavaSketch that is not working correctly. 
+	However, if the default location or name of the jar file is altered by changing the 
+	parameters in the <APPLET> tag, this JavaScript code will continue to look next to this 
+	file for the jar file, which may result in an error message even though the JavaSketch
+	is otherwise functioning correctly. Additionally, future browser updates may cause this code
+	to display errors incorrectly.
+
+	This code is completely optional--the entire contents of this <SCRIPT> tag can be deleted and
+	the JavaSketch will continue to function normally.
+*/
+
+if( IsFileMissing( "./files/jhtml.jar"))
+{
+	document.write("<p>This JavaSketch may be unusable because the applet file (jsp5.jar) appears to be missing from its proper location. (It should be located in the same directory as this web page on the web server.)</p>");
+}
+
+function IsFileMissing( iFileName)
+{
+	var tFileIsMissing = false;
+	var xmlhttp = null;
+	/* If the user is viewing this page with an Opera browser, we return false
+		 as we cannot rely on the detection to work correctly and avoid showing the error altogether */
+	if (window.opera)
+		return false;
+	if (window.ActiveXObject)
+	{
+		try
+		{
+			xmlhttp=new ActiveXObject("MSXML2.XMLHTTP.6.0");
+		}
+		catch(e)
+		{
+			try
+			{
+				xmlhttp=new ActiveXObject("MSXML2.XMLHTTP.3.0");
+			}
+			catch(e)
+			{
+				return false;
+			}
+		}
+ 	}
+	else if (window.XMLHttpRequest)
+	{
+		xmlhttp=new XMLHttpRequest();
+	}
+	if( xmlhttp != null)
+	{
+		try{
+			xmlhttp.open("HEAD", iFileName += (iFileName.match(/\?/) == null ? "?" : "&") + (new Date()).getTime(), false);
+			xmlhttp.send(null);
+			tFileIsMissing = !((xmlhttp.status==200) || (xmlhttp.status == 0));
+		}
+		catch(er){
+			tFileIsMissing = true;
+		}
+	}
+	return tFileIsMissing;
+}
+//-->
+</SCRIPT>
+<APPLET CODE="GSP.class"  ARCHIVE="files/jhtml.jar" CODEBASE="." WIDTH=1293 HEIGHT=647 ALIGN=CENTER><PARAM NAME=MinGrammarVersion VALUE=2>
+<PARAM NAME=MeasureInDegrees VALUE=1><PARAM NAME=DirectedAngles VALUE=0>
+<PARAM NAME=PixelsPerLengthUnit VALUE=37.7953>
+<PARAM NAME=BackRed VALUE=255>
+<PARAM NAME=BackGreen VALUE=255>
+<PARAM NAME=BackBlue VALUE=255>
+<PARAM NAME=Construction VALUE="
+{1} Point(123,309)[label('M'),mediumPoint];
+{2} Point(838,311)[label('N'),mediumPoint];
+{3} Line(2,1)[color(0,0,128),mediumLine,dashed];
+{4} Point on object(3,0.531464)[label('O'),red,mediumPoint];
+{5} Point on object(3,0.15524)[label('A[0]'),black,mediumPoint];
+{6} Segment(4,5)[black,mediumLine];
+{7} Point(4,311)[hidden];
+{8} Point(1289,317)[hidden];
+{9} Point(1291,626)[hidden];
+{10} Point(3,625)[hidden];
+{11} Polygon(7,8,9,10)[black];
+{12} Reflection(6,3)[black,mediumLine];
+{13} Reflection(5,3)[red,mediumPoint];
+{14} Point(625,107)[mediumPoint];
+{15} Point(983,107)[hidden];
+{16} Segment(15,14)[black,mediumLine];
+{17} Point on object(16,1)[label('拖动此处'),red,mediumPoint];
+{18} Point on object(16,0)[hidden];
+{19} Point(999,215)[hidden];
+{20} Point on object(16,1)[hidden];
+{21} Segment(20,19)[hidden];
+{22} Segment(17,19)[hidden];
+{23} Angle(20,19,17,16,48,'α = ')[black];
+{24} Rotation/MeasuredAngle(12,4,23)[black,mediumLine];
+{25} Rotation/MeasuredAngle(5,4,23)[label('A[1]'),black,mediumPoint];
+{26} Rotation/MeasuredAngle(24,4,23)[hidden];
+{27} Rotation/MeasuredAngle(25,4,23)[hidden];
+{28} Rotation/MeasuredAngle(26,4,23)[black,mediumLine];
+{29} Rotation/MeasuredAngle(27,4,23)[label('A[2]'),black,mediumPoint];
+{30} Rotation/MeasuredAngle(28,4,23)[hidden];
+{31} Rotation/MeasuredAngle(29,4,23)[hidden];
+{32} Rotation/MeasuredAngle(30,4,23)[hidden];
+{33} Rotation/MeasuredAngle(31,4,23)[hidden];
+{34} Rotation/MeasuredAngle(32,4,23)[black,mediumLine];
+{35} Rotation/MeasuredAngle(33,4,23)[label('A[3]'),black,mediumPoint];
+{36} Rotation/MeasuredAngle(34,4,23)[hidden];
+{37} Rotation/MeasuredAngle(35,4,23)[hidden];
+{38} Rotation/MeasuredAngle(36,4,23)[hidden];
+{39} Rotation/MeasuredAngle(37,4,23)[hidden];
+{40} Rotation/MeasuredAngle(38,4,23)[hidden];
+{41} Rotation/MeasuredAngle(39,4,23)[hidden];
+{42} Rotation/MeasuredAngle(40,4,23)[black,mediumLine];
+{43} Rotation/MeasuredAngle(41,4,23)[label('A[4]'),black,mediumPoint];
+{44} Reflection(24,3)[black,mediumLine];
+{45} Reflection(25,3)[label('A[1]'),black,mediumPoint];
+{46} Reflection(28,3)[black,mediumLine];
+{47} Reflection(29,3)[label('A[2]'),black,mediumPoint];
+{48} Reflection(34,3)[black,mediumLine];
+{49} Reflection(35,3)[label('A[3]'),black,mediumPoint];
+{50} Reflection(42,3)[black,mediumLine];
+{51} Reflection(43,3)[label('A[4]'),black,mediumPoint];
+">
+您好，运行次插件需要<a href="http://www.java.com/">Java</a></APPLET>
+<P ALIGN=CENTER></P></H4>
+</BODY>
+</HTML>
