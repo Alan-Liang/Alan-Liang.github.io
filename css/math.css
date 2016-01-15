@@ -71,6 +71,6 @@ div.answer-no{
 
 ::selection{
 	font-size:100000px;
-	font-color:red;
+	color:red;
 	background:green;
 }
