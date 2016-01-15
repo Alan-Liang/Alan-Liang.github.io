@@ -45,10 +45,11 @@
 <input type="submit" value="计算" />
 </form>
 
+<br/>
 <a href="/">返回首页</a>|<a href="mathapp">直观点？</a>
 
 </center>
-<iframe src="count.html" style="display:none;"></iframe>
+<div style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257139152'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1257139152%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div>
 <!--Baidu Share-->
 <script>window._bd_share_config=
 {"common":{
