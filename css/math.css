@@ -69,7 +69,7 @@ div.answer-no{
 	width:500px;
 }
 
-::selected{
+::selection{
 	font-size:100000px;
 	font-color:red;
 	background:green;

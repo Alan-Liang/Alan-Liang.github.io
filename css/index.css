@@ -36,7 +36,7 @@ code{
 	display:none;
 }
 
-::selected{
+::selection{
 	font-size:100000px;
 	font-color:red;
 	background:green;
