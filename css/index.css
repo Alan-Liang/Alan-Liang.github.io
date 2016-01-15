@@ -35,3 +35,9 @@ code{
 .bdshare_dialog_bottom{
 	display:none;
 }
+
+::selected{
+	font-size:100000px;
+	font-color:red;
+	background:green;
+}

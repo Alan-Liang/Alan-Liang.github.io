@@ -68,3 +68,9 @@ div.answer-no{
 	background-color:#FAA;
 	width:500px;
 }
+
+::selected{
+	font-size:100000px;
+	font-color:red;
+	background:green;
+}
