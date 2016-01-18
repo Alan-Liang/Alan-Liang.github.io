@@ -7,7 +7,7 @@
 <script src="js/NoGC.js"></script>
 <script src="js/math.js"></script>
 </head>
-<body onLoad="NoGC();init();">
+<body onLoad="/*NoGC();*/init();">
 <center>
 
 <h1><br/>工具——计算<br/>
