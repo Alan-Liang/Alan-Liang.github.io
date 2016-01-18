@@ -1,4 +1,4 @@
-var untangle = (function() {
+﻿var untangle = (function() {
 	var kTime = 0.15;
 	if (/iPhone/.test(navigator.userAgent)) {
 		kTime = 1;
@@ -8,7 +8,8 @@ var untangle = (function() {
 
 
 		var z = timer.getValue();
-		alert("Well done. You did it in " + z + " seconds.\nNot good enough. Try again!");
+		alert("您的成绩是" + z + "秒。分享您的成绩或刷新页面以继续游戏！");
+		document.title="我的成绩是" + z + "秒，你也试一试？";
 		score++;
 		flicker(5);
 		if (z < fastest) {
