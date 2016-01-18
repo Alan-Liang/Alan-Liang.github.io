@@ -1,0 +1,19 @@
+#main_iframe{
+	display:none;
+	height:100%;
+	width:100%;
+} 
+
+#body{
+	-ms-scrollbar-base-color: green;
+	-ms-scrollbar-face-color: white;
+	-ms-scrollbar-arrow-color: red;
+}
+
+#title_a{
+	color:blue;
+}
+
+h1{
+	height:30px;
+}

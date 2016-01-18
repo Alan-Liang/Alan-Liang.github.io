@@ -1,0 +1,43 @@
+﻿h1{
+	background-image:linear-gradient(120deg, #155799, #159957);
+	height:200px;
+	font-size:50px;
+	color:white;
+}
+
+a{
+	outline:0;
+	text-decoration:none;
+	color:#1e6bb8;
+	box-sizing:border-box;
+}
+
+a:hover{
+	text-decoration:underline;
+	color:red;
+}
+
+body{
+	font-size:1.1rem;
+	font-family:黑体;
+}
+
+code{
+	background-color:#f3f6fa;
+	font-family:Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.bdsharebuttonbox{
+	float:right;
+	margin:40 0 0 0;
+}
+
+.bdshare_dialog_bottom{
+	display:none;
+}
+
+::selection{
+	font-size:100000px;
+	color:red;
+	background:green;
+}
