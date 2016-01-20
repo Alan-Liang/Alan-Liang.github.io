@@ -6,7 +6,7 @@
 
 	function win() {
 
-
+		ingame=false;
 		var z = timer.getValue();
 		alert("您的成绩是" + z + "秒。分享您的成绩或刷新页面以继续游戏！");
 		document.title="我的成绩是" + z + "秒，你也试一试？";
