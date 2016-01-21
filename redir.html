@@ -1,0 +1,18 @@
+﻿<script>
+var loc = window.location.href;
+var pla = loc.split('?');
+pla = pla[1];
+if(pla==undefined){
+alert('请勿直接访问！');
+window.location.href='http://alan-liang.github.io/close.html';
+}else{
+
+	 if (navigator.userAgent.indexOf("Chrome") > -1){
+	alert('本系统使用chrome会出bug，请更换浏览器！');
+window.location.href='http://alan-liang.github.io/fkGoCh'+pla.split('#')[0]+'.html#'+pla.split('#')[1];
+ }
+else{
+window.location.href='http://alan-liang.github.io/'+pla.split('#')[0]+'#'+pla.split('#')[1];
+}
+}
+</script>
