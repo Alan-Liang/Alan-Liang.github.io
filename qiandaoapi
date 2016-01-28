@@ -1,4 +1,4 @@
-<html>
-<head><title>Ç©µ½´°</title></head>
+ï»¿<html>
+<head><title>ç­¾åˆ°çª—</title></head>
 <body onload="document.charset='utf-8';var kw=document.getElementById('kw');var tbs=document.getElementById('tbs');kw.value=window.location.href.split('#')[1];document.getElementById('q').submit();">
 <form id='q' action='http://tieba.baidu.com/sign/add/' method='POST'><input name='ie' value='utf-8'><input id='kw' name='kw'><input id='tbs' name='tbs'></form></body></html>
