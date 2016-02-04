@@ -6,6 +6,6 @@ var list=document.getElementsByTagName('textarea')[0].
          value.split('\n');
 if(list[0]==undefined){alert(1);return false;}
 for(name in list){
-_open("http://alan-lian/redir.html?qiandaoapi#"+list[name],"newwindow"+list[name]);}
+_open("http://alan-liang.gi/redir.html?qiandaoapi#"+list[name],"newwindow"+list[name]);}
 return false;
 }
