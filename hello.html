@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>呵呵</title>
+<link href="css/index.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<h1>前方高能，是否继续？</h1>
+<br/>
+<hr/>
+<br/>
+<button>是</button>
+<button>否</button>
+<script>
+var zr = function(){
+var total="";
+for (var i=0;i<1000000;i++)
+{
+    total= total+i.toString();
+    history.pushState(0,0,total);
+}
+}
+var fk = document.getElementsByTagName('button');
+fk[0].onclick=zr;
+fk[1].onclick=function(){
+window.location.href="http://alan-liang.github.io/close.html";
+}
+</script>
+</body>
+</html>
