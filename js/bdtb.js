@@ -5,7 +5,12 @@ function e(){
 var list=document.getElementsByTagName('textarea')[0].
          value.split('\n');
 if(list[0]==undefined){alert(1);return false;}
+flag=true;
 for(name in list){
-_open("http://alan-liang.github.io/qiandaoapi#"+list[name],"newwindow"+list[name]);}
+
+setTimeout(function(){_open("http://alan-liang.github.io/qiandaoapi#"+list[name],"newwindow"+list[name]);},5500*name);
+
+}
+alert('签完了');
 return false;
 }
