@@ -1,13 +1,58 @@
 <html>
 <head>
-<title></title>
+<title>挂科统计</title>
+<style>
+.n:hover{
+	border:1px solid #abcff3;
+	box-shadow:inset 0px 0px 5px #abcff3;
+}
+
+.n:focus{
+	border:1px solid #6b9bdc;
+	box-shadow:inset 0px 0px 5px #6b9bdc;
+}
+.n{
+	height:10%;
+	width:100%;
+	font-size:80px;
+}
+img{width:100%;}
+h1{font-family:黑体;font-size:100px;}
+body{text-align:center;background:#666;}
+</style>
+</head>
+<body>
+<img src="fail.jpg" alt="Fail" />
+<form id="main" onsubmit="return false;">
+<input placeholder="一共考几科？" id="zk" class="n" />
+<input placeholder="挂了几科？" id="gkl" class="n" />
+<input placeholder="你的名字？" id="xm" class="n" />
+<h1>赶快在朋友圈分享出来吧！</h1>
+<input type="submit" value="提交" class="n" />
+</form>
 <script>
 var gkl=location.href.split('gk=');gkl=gkl[1];
+var zk=location.href.split('zk=');zk=zk[1];
 var xm=location.href.split('xm=');xm=xm[1];
 if(gkl){gkl=gkl.split('&');gkl=gkl[0];}
-if(xm){xm=xm.split('&');xm=xm[0];}
-if(gkl&&xm){alert();}
+if(xm){xm=xm.split('&');xm=xm[0];xm=decodeURI(xm);}
+if(zk){zk=zk.split('&');zk=zk[0];}
+if(gkl&&xm){alert(xm+'在'+zk+'科中挂了'+gkl+'科，你呢？');}
+function gei(a){return document.getElementById(a);}
+function valid(){
+var va=/[0-9]$/;
+if(va.test(gei('zk').value)&&va.test(gei('gkl').value)&&gei('xm').value)
+return true;
+}
+gei('main').addEventListener('submit',function(e){e.preventDefault;
+if(valid()){
+history.pushState([],'',"/guake/?xm="+gei('xm').value+"&zk="+gei('zk').value+"&gk="+gei('gkl').value);
+document.title=gei('xm').value+'在'+gei('zk').value+'科中挂了'+gei('gkl').value+'科，你呢？';
+alert('点击右上角分享到朋友圈！');
+}
+else alert('输入格式错误！！！');
+return false;
+});
 </script>
-</head>
-
+</body>
 </html>
