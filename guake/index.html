@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>¹Ò¿ÆÍ³¼Æ</title>
+<title>æŒ‚ç§‘ç»Ÿè®¡</title>
 <style>
 .n:hover{
 	border:1px solid #abcff3;
@@ -17,18 +17,19 @@
 	font-size:80px;
 }
 img{width:100%;}
-h1{font-family:ºÚÌå;font-size:100px;}
+h1{font-family:é»‘ä½“;font-size:100px;}
 body{text-align:center;background:#666;}
 </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
 <img src="fail.jpg" alt="Fail" />
 <form id="main" onsubmit="return false;">
-<input placeholder="Ò»¹²¿¼¼¸¿Æ£¿" id="zk" class="n" />
-<input placeholder="¹ÒÁË¼¸¿Æ£¿" id="gkl" class="n" />
-<input placeholder="ÄãµÄÃû×Ö£¿" id="xm" class="n" />
-<h1>¸Ï¿ìÔÚÅóÓÑÈ¦·ÖÏí³öÀ´°É£¡</h1>
-<input type="submit" value="Ìá½»" class="n" />
+<input placeholder="ä¸€å…±è€ƒå‡ ç§‘ï¼Ÿ" id="zk" class="n" />
+<input placeholder="æŒ‚äº†å‡ ç§‘ï¼Ÿ" id="gkl" class="n" />
+<input placeholder="ä½ çš„åå­—ï¼Ÿ" id="xm" class="n" />
+<h1>èµ¶å¿«åœ¨æœ‹å‹åœˆåˆ†äº«å‡ºæ¥å§ï¼</h1>
+<input type="submit" value="æäº¤" class="n" />
 </form>
 <script>
 var gkl=location.href.split('gk=');gkl=gkl[1];
@@ -37,7 +38,7 @@ var xm=location.href.split('xm=');xm=xm[1];
 if(gkl){gkl=gkl.split('&');gkl=gkl[0];}
 if(xm){xm=xm.split('&');xm=xm[0];xm=decodeURI(xm);}
 if(zk){zk=zk.split('&');zk=zk[0];}
-if(gkl&&xm){alert(xm+'ÔÚ'+zk+'¿ÆÖĞ¹ÒÁË'+gkl+'¿Æ£¬ÄãÄØ£¿');}
+if(gkl&&xm){alert(xm+'åœ¨'+zk+'ç§‘ä¸­æŒ‚äº†'+gkl+'ç§‘ï¼Œä½ å‘¢ï¼Ÿ');}
 function gei(a){return document.getElementById(a);}
 function valid(){
 var va=/[0-9]$/;
@@ -47,10 +48,10 @@ return true;
 gei('main').addEventListener('submit',function(e){e.preventDefault;
 if(valid()){
 history.pushState([],'',"/guake/?xm="+gei('xm').value+"&zk="+gei('zk').value+"&gk="+gei('gkl').value);
-document.title=gei('xm').value+'ÔÚ'+gei('zk').value+'¿ÆÖĞ¹ÒÁË'+gei('gkl').value+'¿Æ£¬ÄãÄØ£¿';
-alert('µã»÷ÓÒÉÏ½Ç·ÖÏíµ½ÅóÓÑÈ¦£¡');
+document.title=gei('xm').value+'åœ¨'+gei('zk').value+'ç§‘ä¸­æŒ‚äº†'+gei('gkl').value+'ç§‘ï¼Œä½ å‘¢ï¼Ÿ';
+alert('ç‚¹å‡»å³ä¸Šè§’åˆ†äº«åˆ°æœ‹å‹åœˆï¼');
 }
-else alert('ÊäÈë¸ñÊ½´íÎó£¡£¡£¡');
+else alert('è¾“å…¥æ ¼å¼é”™è¯¯ï¼ï¼ï¼');
 return false;
 });
 </script>
