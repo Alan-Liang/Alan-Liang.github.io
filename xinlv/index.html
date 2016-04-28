@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="user-scalable=no" />
+<title>心率实时监测</title>
+<style>
+body{background:#CCC;height:100%;}
+.full{display:block;width:100%;height:100%;}
+.hi{display:none;}
+h1{text-align:center;}
+#xl{color:red;}
+</style>
+</head>
+<body>
+<div class="full" id="nbg">
+<h1>点击屏幕以开始</h1>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+<div class="hi" id="bg">
+<h1>当前心率：<span id="xl">loading...</span></h1>
+<h1>心每跳动一次，点一下屏幕</h1>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+<script>
+function $(a){return document.getElementById(a);}
+var nbg,bg,xl;
+nbg=$('nbg');
+bg=$('bg');
+xl=$('xl');
+var beginT,lasT,Ts,i;
+i=0;Ts=[];lasT=0;
+var nbgLis=function(){
+	nbg.className="hi";
+	bg.className="full";
+	beginT=new Date().getTime();
+};
+var bgLis=function(){
+	var bet=new Date().getTime()-lasT-beginT;
+	console.info(bet);
+	if(bet>=3000){return prompt('',Ts);}else{
+	Ts[i]=lasT=bet+lasT;
+	xl.innerHTML=(parseInt((60/bet*1000000)+"")/1000)+"次每分";
+	i++;
+}};
+nbg.addEventListener('click',nbgLis);
+bg.addEventListener('click',bgLis);
+</script>
+</body>
+</html>
