@@ -27,7 +27,7 @@ h1{text-align:center;}
 </div>
 <div class="hi" id="bg">
 <h1>当前心率：<span id="xl">loading...</span></h1>
-<h1>心每跳动一次，点一下屏幕</h1>
+<h1 class="tips">心每跳动一次，点一下屏幕</h1>
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -44,6 +44,7 @@ var nbg,bg,xl;
 nbg=$('nbg');
 bg=$('bg');
 xl=$('xl');
+var tips="形体老师在你后面 每天点一点 我爱你 点屏幕以继续 测试中，请勿吐槽".split(" ");
 var beginT,lasT,Ts,i;
 i=0;Ts=[];lasT=0;
 var nbgLis=function(){
@@ -57,6 +58,7 @@ var bgLis=function(){
 	if(bet>=3000){return prompt('',Ts);}else{
 	Ts[i]=lasT=bet+lasT;
 	xl.innerHTML=(parseInt((60/bet*1000000)+"")/1000)+"次每分";
+        $('tip').innerHTML=tips[parseInt((60/bet*1000000)+"")%4];
 	i++;
 }};
 nbg.addEventListener('click',nbgLis);
