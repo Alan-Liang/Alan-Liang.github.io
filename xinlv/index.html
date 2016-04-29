@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -62,7 +62,7 @@ var bgLis=function(){
 	if(bet>=3000){return prompt('',Ts);}else{
 	Ts[i]=lasT=bet+lasT;
 	xl.innerHTML=(parseInt((60/bet*1000000)+"")/1000)+"次每分";
-        $('tips').innerHTML=tips[parseInt((60/bet*1000)+"")%4];
+        $('tips').innerHTML=tips[parseInt((60/bet*1000)+"")%5];
 	i++;
 }};
 nbg.addEventListener('click',nbgLis);
