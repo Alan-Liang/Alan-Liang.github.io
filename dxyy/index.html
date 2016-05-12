@@ -21,7 +21,9 @@ var a="";
 //window.onmousedown=function(e){console.info(e.pageY+" "+e.pageX+" ");a=a+e.pageY+" "+e.pageX+" ";console.warn(a);}
 var b="417 271 311 323 232 168 155 153 71 142 39 331 142 277 303 196 152 188 229 258 339 161 383 236".split(" ");
 var i=1;
-
+window.onc=function(){
+animate(p,{top:parseInt(b[2*i])-10,left:parseInt(b[2*i+1])-10,duration:2000});i++;if(i>=b.length/2)i=0;
+ti.className="hidden";};
 b="415 272 397 346 310 322 236 298 231 171 209 174 130 171 106 142 64 143 17 259 28 300 48 312 37 333 73 332 75 312 93 308 103 283 117 278 142 269 122 283 138 225 295 243 303 199 297 245 136 228 126 191 145 164 154 187 144 165 127 195 136 224 242 240 227 261 241 241 243 219 298 194 337 158 299 199 320 208 318 235 333 217 382 224 375 241 378 225 325 216 323 233 313 232 323 207 298 196 274 228 243 223 238 291 315 325 398 347 414 270".split(" ");
  
 //提示语句
@@ -31,18 +33,16 @@ window.showtip=function(a){ti.className='';ti.innerHTML='<h1>'+tips[a]+'</h1>';}
 
 window.showtip(0);
 
-window.onresize=function(){if(window.innerHeight<=window.innerWidth)window.showtip(tips.length-1);else window.showtip(abc-1);}
+window.onresize=function(){if(window.innerHeight<=window.innerWidth){window.showtip(tips.length-1);window.onclick=null;}else {window.showtip(abc-1);window.onclick=window.onc;}}
 
-if(window.innerHeight<=window.innerWidth)window.showtip(tips.length-1);
+window.onresize();
 
 abc=1;
 
 var stopPointId=[3,5,7,9,13,18,19,23,28,33,37,43,53,55];
 
+
 function animate(elem, options){
-	var onc=function(){
-animate(p,{top:parseInt(b[2*i])-10,left:parseInt(b[2*i+1])-10,duration:2000});i++;if(i>=b.length/2)i=0;
-ti.className="hidden";};
 	//动画初始值
 	var start = parseInt(elem.style['left'].replace('px',''));
 	var startt=parseInt(elem.style['top'].replace('px',''));
