@@ -1,6 +1,6 @@
 <html>
 <head>
-<title> </title>
+<title>定向越野</title>
 <meta name="viewport" content="width=500,user-scalable=no" />
 </head>
 <style>
@@ -25,11 +25,13 @@ var i=1;
 b="415 272 397 346 310 322 236 298 231 171 209 174 130 171 106 142 64 143 17 259 28 300 48 312 37 333 73 332 75 312 93 308 103 283 117 278 142 269 122 283 138 225 295 243 303 199 297 245 136 228 126 191 145 164 154 187 144 165 127 195 136 224 242 240 227 261 241 241 243 219 298 194 337 158 299 199 320 208 318 235 333 217 382 224 375 241 378 225 325 216 323 233 313 232 323 207 298 196 274 228 243 223 238 291 315 325 398 347 414 270".split(" ");
  
 //提示语句
-var tips="下地铁了<br /><span class='a'>点击以继续</span>``起点``第一个点<br /><span class='a'><span style='font-size:10px;'>sb</span>的编花篮</span>``第二个点``第三个点<br /><span class='b'>我们说，4.2m，肖老师说，不对，我们说，3m，肖老师说，不对，我们说，3.5m，肖老师说，有误差，老师给我们讲了一遍，让我们走了</span>``第四个点<br /><span class='a'>老师说，和标答不一样</span>``我走在前面，其他人找不到我了``第五个点``第六个点``第七个点(胡老师)<br /><span class='b'>很难找到的一个点，虽然我们早就找到了，但答题又用了10分钟。</span>``第八个点<br /><span class='a'>很简单就找到了</span>``第九个点``最后一个点``终点<br /><span class='a'>我们都找不到廉天浩了</span>``谢谢观赏".split("``");//unfinished
+var tips="下地铁了<br /><span class='a'>点击以继续</span>``起点``第一个点<br /><span class='a'><span style='font-size:10px;'>sb</span>的编花篮</span>``第二个点``第三个点<br /><span class='b'>我们说，4.2m，肖老师说，不对，我们说，3m，肖老师说，不对，我们说，3.5m，肖老师说，有误差，老师给我们讲了一遍，让我们走了</span>``第四个点<br /><span class='a'>老师说，和标答不一样</span>``我走在前面，其他人找不到我了``第五个点``第六个点``第七个点(胡老师)<br /><span class='b'>很难找到的一个点，虽然我们早就找到了，但答题又用了10分钟。</span>``第八个点<br /><span class='a'>很简单就找到了</span>``第九个点``最后一个点``终点<br /><span class='a'>我们都找不到廉天浩了</span>``谢谢观赏``请竖屏观赏，谢谢".split("``");//unfinished
 
 window.showtip=function(a){ti.className='';ti.innerHTML='<h1>'+tips[a]+'</h1>';};
 
 window.showtip(0);
+
+if(window.innerHeight<=window.innerWidth)window.showtip(tips.length-1);
 
 abc=1;
 
