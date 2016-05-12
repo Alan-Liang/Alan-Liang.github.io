@@ -33,7 +33,7 @@ window.showtip=function(a){ti.className='';ti.innerHTML='<h1>'+tips[a]+'</h1>';}
 
 window.showtip(0);
 
-window.onresize=function(){if(window.innerHeight<=window.innerWidth){window.showtip(tips.length-1);window.onclick=null;}else {window.showtip(abc-1);window.onclick=window.onc;}}
+window.onresize=function(){if(window.innerHeight<=window.innerWidth){window.showtip(tips.length-1);window.onclick=null;}else if(!window.onani){window.showtip(abc-1);window.onclick=window.onc;}}
 
 window.onresize();
 
@@ -65,7 +65,7 @@ function animate(elem, options){
 	}
 	//动画开始时间
 	var startTime = createTime();
-
+	window.onani=true;
 	function tick(){
 		//每次变化的时间
 		var remaining = Math.max(0, startTime + dur - createTime())
@@ -75,7 +75,8 @@ function animate(elem, options){
 			//停止动画
 			clearInterval(timerId);
 			timerId = null;
-			window.onclick=onc;	
+			if(window.innerHeight<=window.innerWidth)window.onclick=onc;
+			window.onani=false;
 		}
 		var setStyle = function(value,valuee){
 			window.onclick=null;
