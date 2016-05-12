@@ -56,7 +56,7 @@ function animate(elem, options){
 	if(stopPointId[c]==(i+1))state=true;
 	}if(!state)setTimeout(function(){onc();},dur);
 	else {abc++;
-	setTimeout(function(){window.showtip(abc-1);},dur);}
+	setTimeout(function(){if(window.innerHeight<=window.innerWidth)window.showtip(abc-1);},dur);}
 	state=false;
 	//动画id
 	var timerId;
