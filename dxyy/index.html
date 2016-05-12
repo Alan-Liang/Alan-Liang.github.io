@@ -31,7 +31,7 @@ window.showtip=function(a){ti.className='';ti.innerHTML='<h1>'+tips[a]+'</h1>';}
 
 window.showtip(0);
 
-window.onresize=function(){if(window.innerHeight<=window.innerWidth)window.showtip(tips.length-1);else if(window.innerHeight<=window.innerWidth)window.showtip(abc-1);}
+window.onresize=function(){if(window.innerHeight<=window.innerWidth)window.showtip(tips.length-1);else window.showtip(abc-1);}
 
 if(window.innerHeight<=window.innerWidth)window.showtip(tips.length-1);
 
