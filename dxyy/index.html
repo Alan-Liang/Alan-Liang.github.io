@@ -8,10 +8,10 @@
 .b{font-size:40px;}
 #tip{background:#000;opacity:0.2;top:0;left:0;width:100%;height:100%;position:fixed;}
 .hidden{display:none;}
-h1{color:#fff;font-family:ºÚÌå;font-size:100px;text-align:center;/*vertical-align:middle;*/}
+h1{color:#fff;font-family:é»‘ä½“;font-size:100px;text-align:center;/*vertical-align:middle;*/}
 </style>
 <body>
-<img src="i.jpg" alt="µØÍ¼" />
+<img src="i.jpg" alt="åœ°å›¾" />
 <div id="tip" class="hidden"></div>
 <div style="height:20px;width:20px;background:red;position:fixed;opacity:0.3;left:261;top:407;" id="point"></div>
 <script>var p=document.getElementById('point');
@@ -23,9 +23,9 @@ var b="417 271 311 323 232 168 155 153 71 142 39 331 142 277 303 196 152 188 229
 var i=1;
 
 b="415 272 397 346 310 322 236 298 231 171 209 174 130 171 106 142 64 143 17 259 28 300 48 312 37 333 73 332 75 312 93 308 103 283 117 278 142 269 122 283 138 225 295 243 303 199 297 245 136 228 126 191 145 164 154 187 144 165 127 195 136 224 242 240 227 261 241 241 243 219 298 194 337 158 299 199 320 208 318 235 333 217 382 224 375 241 378 225 325 216 323 233 313 232 323 207 298 196 274 228 243 223 238 291 315 325 398 347 414 270".split(" ");
-
-//ÌáÊ¾Óï¾ä
-var tips="ÏÂµØÌúÁË<br /><span class='a'>µã»÷ÒÔ¼ÌĞø</span>``Æğµã``µÚÒ»¸öµã<br /><span class='a'><span style='font-size:10px;'</span>sb</span>µÄ±à»¨Àº</span>``µÚ¶ş¸öµã``µÚÈı¸öµã<br /><span class='b'>ÎÒÃÇËµ£¬4.2m£¬Ğ¤ÀÏÊ¦Ëµ£¬²»¶Ô£¬ÎÒÃÇËµ£¬3m£¬Ğ¤ÀÏÊ¦Ëµ£¬²»¶Ô£¬ÎÒÃÇËµ£¬3.5m£¬Ğ¤ÀÏÊ¦Ëµ£¬ÓĞÎó²î£¬ÀÏÊ¦¸øÎÒÃÇ½²ÁËÒ»±é£¬ÈÃÎÒÃÇ×ßÁË</span>``µÚËÄ¸öµã<br /><span class='a'>ÀÏÊ¦Ëµ£¬ºÍ±ê´ğ²»Ò»Ñù</span>``ÎÒ×ßÔÚÇ°Ãæ£¬ÆäËûÈËÕÒ²»µ½ÎÒÁË``µÚÎå¸öµã``µÚÁù¸öµã``µÚÆß¸öµã(ºúÀÏÊ¦)<br /><span class='a'>ºÜÄÑÕÒµ½µÄÒ»¸öµã£¬ËäÈ»ÎÒÃÇÔç¾ÍÕÒµ½ÁË£¬µ«´ğÌâÓÖÓÃÁË10·ÖÖÓ¡£</span>``µÚ°Ë¸öµã<br /><span class='a'>ºÜ¼òµ¥¾ÍÕÒµ½ÁË</span>``µÚ¾Å¸öµã``×îºóÒ»¸öµã``ÖÕµã<br /><span class='a'>ÎÒÃÇ¶¼ÕÒ²»µ½Á®ÌìºÆÁË</span>``Ğ»Ğ»¹ÛÉÍ".split("``");//unfinished
+ 
+//æç¤ºè¯­å¥
+var tips="ä¸‹åœ°é“äº†<br /><span class='a'>ç‚¹å‡»ä»¥ç»§ç»­</span>``èµ·ç‚¹``ç¬¬ä¸€ä¸ªç‚¹<br /><span class='a'><span style='font-size:10px;'</span>sb</span>çš„ç¼–èŠ±ç¯®</span>``ç¬¬äºŒä¸ªç‚¹``ç¬¬ä¸‰ä¸ªç‚¹<br /><span class='b'>æˆ‘ä»¬è¯´ï¼Œ4.2mï¼Œè‚–è€å¸ˆè¯´ï¼Œä¸å¯¹ï¼Œæˆ‘ä»¬è¯´ï¼Œ3mï¼Œè‚–è€å¸ˆè¯´ï¼Œä¸å¯¹ï¼Œæˆ‘ä»¬è¯´ï¼Œ3.5mï¼Œè‚–è€å¸ˆè¯´ï¼Œæœ‰è¯¯å·®ï¼Œè€å¸ˆç»™æˆ‘ä»¬è®²äº†ä¸€éï¼Œè®©æˆ‘ä»¬èµ°äº†</span>``ç¬¬å››ä¸ªç‚¹<br /><span class='a'>è€å¸ˆè¯´ï¼Œå’Œæ ‡ç­”ä¸ä¸€æ ·</span>``æˆ‘èµ°åœ¨å‰é¢ï¼Œå…¶ä»–äººæ‰¾ä¸åˆ°æˆ‘äº†``ç¬¬äº”ä¸ªç‚¹``ç¬¬å…­ä¸ªç‚¹``ç¬¬ä¸ƒä¸ªç‚¹(èƒ¡è€å¸ˆ)<br /><span class='a'>å¾ˆéš¾æ‰¾åˆ°çš„ä¸€ä¸ªç‚¹ï¼Œè™½ç„¶æˆ‘ä»¬æ—©å°±æ‰¾åˆ°äº†ï¼Œä½†ç­”é¢˜åˆç”¨äº†10åˆ†é’Ÿã€‚</span>``ç¬¬å…«ä¸ªç‚¹<br /><span class='a'>å¾ˆç®€å•å°±æ‰¾åˆ°äº†</span>``ç¬¬ä¹ä¸ªç‚¹``æœ€åä¸€ä¸ªç‚¹``ç»ˆç‚¹<br /><span class='a'>æˆ‘ä»¬éƒ½æ‰¾ä¸åˆ°å»‰å¤©æµ©äº†</span>``è°¢è°¢è§‚èµ".split("``");//unfinished
 
 window.showtip=function(a){ti.className='';ti.innerHTML='<h1>'+tips[a]+'</h1>';};
 
@@ -39,10 +39,10 @@ function animate(elem, options){
 	var onc=function(){
 animate(p,{top:parseInt(b[2*i])-10,left:parseInt(b[2*i+1])-10,duration:2000});i++;if(i>=b.length/2)i=0;
 ti.className="hidden";};
-	//¶¯»­³õÊ¼Öµ
+	//åŠ¨ç”»åˆå§‹å€¼
 	var start = parseInt(elem.style['left'].replace('px',''));
 	var startt=parseInt(elem.style['top'].replace('px',''));
-	//¶¯»­½áÊøÖµ
+	//åŠ¨ç”»ç»“æŸå€¼
 	var end = options.left;
 	var endd=options.top;
 	var bet=Math.sqrt(Math.abs(endd-startt)*Math.abs(endd-startt)+Math.abs(end-start)*Math.abs(end-start));
@@ -54,21 +54,21 @@ ti.className="hidden";};
 	else {abc++;
 	setTimeout(function(){window.showtip(abc-1);},dur);}
 	state=false;
-	//¶¯»­id
+	//åŠ¨ç”»id
 	var timerId;
 	var createTime = function(){
 		return  (+new Date);
 	}
-	//¶¯»­¿ªÊ¼Ê±¼ä
+	//åŠ¨ç”»å¼€å§‹æ—¶é—´
 	var startTime = createTime();
 
 	function tick(){
-		//Ã¿´Î±ä»¯µÄÊ±¼ä
+		//æ¯æ¬¡å˜åŒ–çš„æ—¶é—´
 		var remaining = Math.max(0, startTime + dur - createTime())
 		var temp = remaining / dur || 0;
 		var percent = 1 - temp;
 		var stop = function(){
-			//Í£Ö¹¶¯»­
+			//åœæ­¢åŠ¨ç”»
 			clearInterval(timerId);
 			timerId = null;
 			window.onclick=onc;	
@@ -78,7 +78,7 @@ ti.className="hidden";};
 			elem.style['left'] = value + 'px';
 			elem.style['top']=valuee+'px';
 		}
-		//ÒÆ¶¯µÄ¾àÀë
+		//ç§»åŠ¨çš„è·ç¦»
 		var now = (end - start) * percent + start;
 		var noww = (endd - startt) * percent + startt;
 		if(percent === 1){
@@ -89,7 +89,7 @@ ti.className="hidden";};
 		}
 	}
 
-	//¿ªÊ¼Ö´ĞĞ¶¯»­
+	//å¼€å§‹æ‰§è¡ŒåŠ¨ç”»
 	var timerId = setInterval(tick, 5);
 }
 
