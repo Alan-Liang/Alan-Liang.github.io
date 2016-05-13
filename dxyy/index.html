@@ -35,8 +35,6 @@ window.showtip(0);
 
 window.onresize=function(){if(window.innerHeight<=window.innerWidth){window.showtip(tips.length-1);window.onclick=null;}else if(!window.onani){window.showtip(abc-1);window.onclick=window.onc;}}
 
-window.onresize();
-
 abc=1;
 
 var stopPointId=[3,5,7,9,13,18,19,23,28,33,37,43,53,55];
@@ -98,11 +96,7 @@ function animate(elem, options){
 	var timerId = setInterval(tick, 5);
 }
 
-window.onclick=function(){
-animate(p,{top:parseInt(b[2*i])-10,left:parseInt(b[2*i+1])-10,duration:2000});i++;if(i>=b.length/2)i=0;
-ti.className="hidden";}
-
-
+window.onresize();
 
 </script>
 <!--统计代码-->
