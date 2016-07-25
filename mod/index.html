@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>modulo</title>
+<title>euclidean</title>
 <style>
 body{
 background:#233666;
@@ -151,7 +151,7 @@ var ans=$('#answ2')[0];
 var ea=$('#ea')[0];
 var eea=$('#eea')[0];
 var res=euclidean(a,b);
-alert(JSON.stringify(res));
+//alert(JSON.stringify(res));
 
 ea.innerHTML=res.EA.join('\n');
 eea.innerHTML=res.EEA.join('\n');
@@ -161,7 +161,7 @@ ans.innerHTML=
 return;
 }
 var m;
-if(res.data[1]==b)
+if(res.data[1]==a)
    m=res.data[0];
 else
    m=res.data[2];
