@@ -11,7 +11,7 @@
 h1{color:#fff;font-family:黑体;font-size:100px;text-align:center;/*vertical-align:middle;*/}
 </style>
 <body>
-<img src="i.jpg" alt="地图" />
+<img src="i.jpg" id="imagee" alt="地图" />
 <div id="tip" class="hidden"></div>
 <div style="height:20px;width:20px;background:red;position:fixed;opacity:0.3;left:261;top:407;" id="point"></div>
 <script>var p=document.getElementById('point');
@@ -96,7 +96,7 @@ function animate(elem, options){
 	var timerId = setInterval(tick, 5);
 }
 
-setInterval(function(){window.onclick=window.onc;}, 10);
+setInterval(function(){window.onclick=window.onc;document.getElementById("imagee").onclick=window.onc;}, 10);
 
 window.onresize();
 
