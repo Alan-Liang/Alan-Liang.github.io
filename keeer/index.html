@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>客页 | KEEER</title>
+<link href="./gs.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#mtitle {
+	font-size: 52px;
+	text-align: center;
+	margin-top: 150px;
+}
+#buttons {
+	font-size: 32px;
+	margin-top: 100px;
+}
+#buttons button{
+	font-size: 32px;
+	width:170px;
+	height:60px;
+}
+#pinner {
+	position: relative;
+	width: 170px;
+	background-color: #7dce44;
+}
+#dproj {
+	display: inline-table;
+}
+[hidden]{display:none;}
+#dproj:hover #pinner{
+	display:block;
+}
+#pinner.focus{
+	display:block;
+}
+a{color:white;}
+</style>
+</head>
+<body>
+<div id="container">
+<h1 id="mtitle">客页工作室 | KEEER</h1>
+<center id="buttons">
+<button class="blue" id="babout">关于我们</button>
+<div id="dproj"><button class="green" id="bproj">项目</button><div id="pinner" hidden><a href="">a</a><hr /><a href="">b</a><br /></div></div>
+<a href=""><button class="red" id="bjoin">加入我们</button></a>
+</center>
+</div>
+
+<script>
+var $=function(a){return document.getElementById(a);};
+var bproj=$("bproj");
+var dproj=$("dproj");
+var pinner=$("pinner");
+var mouseLisOn=function(){
+	if(pinner.className=="focus")pinner.className="";
+	else pinner.className="focus";
+};
+bproj.onclick=mouseLisOn;
+</script>
+</body>
+</html>
