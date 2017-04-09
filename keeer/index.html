@@ -20,19 +20,31 @@
 	height:60px;
 }
 #pinner {
+	transition: opacity .3s ease-in-out;
+	display:block;
 	position: relative;
 	width: 170px;
 	background-color: #7dce44;
+	text-align:left;
 }
 #dproj {
 	display: inline-table;
 }
-[hidden]{display:none;}
+#pinner a:hover {
+    padding-left: 16px;
+}
+#pinner a{
+	transition: padding .3s ease-in-out;
+	 padding-left: 8px;
+	text-decoration:none;
+	color:#ff6666;
+}
+[hidden]{opacity:0;}
 #dproj:hover #pinner{
-	display:block;
+	opacity:1;
 }
 #pinner.focus{
-	display:block;
+	opacity:1;
 }
 a{color:white;}
 </style>
@@ -42,7 +54,7 @@ a{color:white;}
 <h1 id="mtitle">客页工作室 | KEEER</h1>
 <center id="buttons">
 <button class="blue" id="babout">关于我们</button>
-<div id="dproj"><button class="green" id="bproj">项目</button><div id="pinner" hidden><a href="">a</a><hr /><a href="">b</a><br /></div></div>
+<div id="dproj"><button class="green" id="bproj">项目</button><div id="pinner" hidden><a href="./a.html">Traps'N Roads</a><hr /><a href="">b</a><br /></div></div>
 <a href=""><button class="red" id="bjoin">加入我们</button></a>
 </center>
 </div>
