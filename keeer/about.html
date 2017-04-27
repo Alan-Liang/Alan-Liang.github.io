@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+body{
+	background:#000;
+	color:#fff;
+	font-family:Consolas;
+	/*display:table;*/
+}
+.box_n{
+	border:solid #fff 3px;
+	border-radius:10px;
+	background:#333;
+	color:#fff;
+	padding-left:5px;
+	padding-right:5px;
+	height:auto;
+	display:inline-block;
+	vertical-align:text-top;
+	margin:auto;
+	float:none;
+}
+h2,h3,h4,h5,h6{
+	text-align:center;
+}
+</style>
+<script language="wtf_lang" id="templx">
+	<h2 class="ntitle">Queue</h2>
+    <h3>Mid Atlantic Engineering Technical Services</h3>
+<p>I am not Queue.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies est ut purus dapibus dignissim. Donec porttitor vestibulum quam, eget eleifend massa sodales semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam quis pharetra dolor. Nulla condimentum eget lacus eu ullamcorper. Vivamus feugiat pellentesque lorem quis rhoncus. Aenean viverra cursus diam fringilla tristique. Donec eu mauris non tellus ullamcorper commodo a sit amet tellus. Suspendisse quis elit neque. Nullam justo neque, maximus et tellus scelerisque, laoreet accumsan tellus. Duis massa dui, porta eu ipsum in, maximus luctus eros. In et diam eros. Curabitur libero leo, venenatis sed ante quis, posuere viverra nunc.</p>
+<p>Donec suscipit dapibus porta. Suspendisse ultrices hendrerit dictum. Praesent quis ex venenatis, semper augue sed, scelerisque leo. Donec eget volutpat lacus, quis luctus sapien. Integer id massa ac leo consequat fermentum. Aliquam quis venenatis metus. Nam bibendum sed ipsum vel fermentum. Sed pulvinar laoreet consequat. Nam congue aliquam pretium.</p>
+</script>
+<script language="wtf_lang" id="templ">
+	<h2 class="ntitle">{{Name}}</h2>
+	{{Desc}}
+</script>
+
+</head>
+
+<body>
+<script>
+function debug(str){
+	var debug=true;
+	if(debug)alert(str);
+}
+var templ=document.getElementById("templ").innerHTML;
+var names=[	{Name:"Queue",Desc:"<p>I am not Queue.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies est ut purus dapibus dignissim. Donec porttitor vestibulum quam, eget eleifend massa sodales semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam quis pharetra dolor. Nulla condimentum eget lacus eu ullamcorper. Vivamus feugiat pellentesque lorem quis rhoncus. Aenean viverra cursus diam fringilla tristique. Donec eu mauris non tellus ullamcorper commodo a sit amet tellus. Suspendisse quis elit neque. Nullam justo neque, maximus et tellus scelerisque, laoreet accumsan tellus. Duis massa dui, porta eu ipsum in, maximus luctus eros. In et diam eros. Curabitur libero leo, venenatis sed ante quis, posuere viverra nunc.</p>"},
+			{Name:"Edgaru089",Desc:"<p>I am not Edgar.Donec suscipit dapibus porta. Suspendisse ultrices hendrerit dictum. Praesent quis ex venenatis, semper augue sed, scelerisque leo. Donec eget volutpat lacus, quis luctus sapien. Integer id massa ac leo consequat fermentum. Aliquam quis venenatis metus. Nam bibendum sed ipsum vel fermentum. Sed pulvinar laoreet consequat. Nam congue aliquam pretium.</p>"},
+			{Name:"Alan-Liang",Desc:"<p>I am not Alan-Liang.</p>"},
+			{Name:"Tiger Fan",Desc:"<p>I continue loving myself...</p>"},
+			{Name:"Sunny Peng",Desc:"<p>I am not Sunny Peng</p>"}
+			];
+function tpl(str,idn){
+	var st=/{{[a-zA-Z]*}}/gi;
+	var res="";
+	var comp;
+	var last=0;
+	var flag=false;
+	while(comp=st.exec(str)){
+		res+=str.substring(last,comp.index);
+		flag=true;
+		last=comp.index+comp[0].length;
+		var pps=str.substring(comp.index+2,last-2);
+		var val;
+		if(val=names[idn][pps])res+=val;
+		else res+=("{{"+pps+"}}");
+	}
+	res+=str.substring(last,str.length);
+	return res;
+}
+var newdiv;
+for(var i=0;i<names.length;i++){
+	newdiv=document.createElement("div");
+	newdiv.className="box_n";
+	newdiv.innerHTML=tpl(templ,i);
+	document.body.appendChild(newdiv);
+	document.body.innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;";
+}
+debug(templ);
+document.body.style.cssText="width:"+((window.innerWidth-16)*(names.length+3)*0.3)+"px;";
+var divs=document.getElementsByClassName("box_n");
+for(var i=0;i<divs.length;i++){
+	divs[i].style.cssText="width:"+((window.innerWidth-16)*0.3)+"px;";
+}
+</script>
+thanks god for all
+</body>
+</html>
