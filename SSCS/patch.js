@@ -11,7 +11,7 @@
 		var pps=str.substring(comp.index+2,last-2);
 		var val;
 		if(pps=="time")chatmsg[idn][pps]=new Date(chatmsg[idn][pps]).toString();
-		if(pps=="text" && (chatmsg[idn][pps].indexOf("@"+user)>-1))
+		if(pps=="text" && (chatmsg[idn][pps].indexOf("@"+uname)>-1))
 			chatmsg[idn][pps]="<font class=\"atme\">"+chatmsg[idn][pps]+"</font>";
 /*		if(pps=="text"&&/\[Code:.*\]/.test(chatmsg[idn][pps])){
 			/\[Code:.*\]/gi.exec(chatmsg[idn][pps]).index;
