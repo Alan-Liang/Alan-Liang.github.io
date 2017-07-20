@@ -1,0 +1,66 @@
+<script type="text/javascript">
+var nowtrying=[];
+function stat(id,is){
+	return (nowtrying[id]==is);
+}
+function corr(id){
+	return (stat(id,0))||(stat(id,1));
+}
+
+var listeners=[
+	"(stat(1,0)||stat(3,0)||stat(5,0)||stat(7,0)||(stat(9,0)))",
+	"(stat(2,1)||stat(2,2))",
+	"(corr(5)||(!corr(7)))",
+	"(!corr(1))",
+	"(corr(2)||corr(4))",
+	"(!corr(3))",
+	"(!stat(1,0))",
+	"(stat(8,3)&&(stat(9,1)||stat(9,2)))",
+	"(stat(9,3)&&(!corr(6)))"
+];
+
+function g3ds(d){
+	var stack=[];
+	var b=d;
+	while(b!=0){
+		stack.push(b%3);
+		b=parseInt(b/3);
+	}
+	return stack;
+}
+
+for(var i = 1;i<8;i++){
+	if(i!=2){
+		for(var p=0;p<6561;p++){
+			var ds=g3ds(p);
+			for(var j=1;j<10;j++){
+				var x=j;
+				if(j>i){
+					x--;
+					var data=(ds[x-1]+1)||1;
+					nowtrying[j]=data;
+				}
+				if(j==i){
+					nowtrying[i]=0;
+				}
+				if(j<i){
+					nowtrying[j]=(ds[x-1]+1)||1;
+				}
+			}
+			
+			if(p<10)console.log(nowtrying);
+			//execute listeners
+			var cs=[];
+			var flag=true;
+			for(var j=1;j<10;j++){
+				var evaled=eval("(function(){return "+listeners[j-1]+";})();");
+				var dat=cs[j]=(corr(j)==evaled);
+				if(!dat)flag=false;
+				if(p<10)console.log(j+" is "+evaled+"that should be "+corr(j)+" that stats "+dat);
+			}
+			if(flag)document.write(nowtrying+"<br />");
+		}
+	}
+}
+
+</script>
