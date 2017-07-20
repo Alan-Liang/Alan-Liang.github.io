@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>rptt</title>
+<style type="text/css">
+body {
+	background:#233666;
+	color:#fff;
+}
+#rpc{
+	width:100%;
+	min-height:300px;
+}
+td{
+	width:20%;
+}
+</style>
+</head>
+<body>
+<h1>Reverse Polish Truth Table</h1>
+<textarea id="rpc" >A
+B
+&
+C
+|</textarea>
+(This is (A&B)VC .)
+<br />
+<button id="submit" >Submit</button>
+<h1>Result:</h1>
+<table id="result"></table>
+<script type="text/javascript">
+function g2ds(d){
+	var stack=[];
+	var b=d;
+	while(b!=0){
+		stack.push(b%2);
+		b=parseInt(b/2);
+	}
+	return stack;
+}
+
+
+var comm=[];
+var nd={};
+var resdiv="";
+var restab=document.getElementById("result");
+var rpc=document.getElementById("rpc");
+document.getElementById("submit").onclick=function(){
+	comm=rpc.value.split("\n");
+	var _comm=comm.concat();;
+	resdiv="<tr>";
+	var c;
+	var set={};
+	var aset=[];
+	for(var i=0;i<_comm.length;i++){
+		c=_comm[i];
+		if(!(/^\)|&|=|\||!$/.test(c))){
+			set[c]=true;
+		}
+	}
+	for(var i in set){
+		aset.push(i);
+	}
+	for(var i=0;i<aset.length;i++){
+		resdiv+="<td>"+aset[i]+"</td>";
+	}
+	resdiv+="<td>result</td></tr>";
+	var ams=Math.pow(2,aset.length);
+	for(var i=0;i<ams;i++){
+		var ds=g2ds(i);
+		for(var j=0;j<aset.length;j++){
+			var cd=ds[aset.length-j-1];
+			nd[aset[j]]=cd?1:0;
+		}
+		var res=dotable();
+		resdiv+="<tr>";
+		for(var k=0;k<aset.length;k++){
+			resdiv+="<td>"+nd[aset[k]]+"</td>";
+		}
+		resdiv+="<td>"+res+"</td></tr>";
+	}
+	restab.innerHTML=resdiv;
+}
+
+function imply(){
+	var comb=window.lstack.pop();
+	var coma=window.lstack.pop();
+	window.lstack.push((!(comb&&(!coma)))?1:0);
+}
+function and(){
+	window.lstack.push((window.lstack.pop()&window.lstack.pop())?1:0);
+}
+function or(){
+	window.lstack.push((window.lstack.pop()|window.lstack.pop())?1:0);
+}
+function not(){
+	window.lstack.push((!window.lstack.pop())?1:0);
+}
+function equiv(){
+	window.lstack.push((window.lstack.pop()==window.lstack.pop())?1:0);
+}
+function dotable(){
+window.lstack=[];
+var c;
+var _comm=comm.concat();
+for(var i=0;i<_comm.length;i++){
+	c=_comm[i];
+	switch(c){
+		case ")":
+		imply();
+		break;
+		
+		case "&":
+		and();
+		break;
+		
+		case "|":
+		or();
+		break;
+		
+		case "!":
+		not();
+		break;
+		
+		case "=":
+		equiv();
+		break;
+		
+		default:
+		window.lstack.push(nd[c]);
+	}
+	console.log(window.lstack);
+}
+return window.lstack;
+}
+
+</script>
+</body>
+</html>
