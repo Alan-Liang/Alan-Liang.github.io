@@ -1,0 +1,98 @@
+body {
+	background: #233666;
+	height: 100%;
+ }
+ 
+ .log,#log{
+ 	height:500px;
+}
+
+#container{
+	height: 100%;
+}
+
+div#topdiv{
+	position: fixed;
+	top: 5px;
+	width: 100%;
+	left: 5px;
+	text-align: center;
+}
+
+ div#bottomdiv{
+	position: fixed;
+	bottom: 5px;
+	width: 100%;
+	left: 5px;
+	text-align: center;
+} 
+
+div#leftdiv{
+	float: left;
+	height: 100%;
+	width: 8%;
+	margin-top: 90px;
+} 
+
+div#rightdiv{
+	float: right;
+	height: 100%;
+	width: 8%;
+	margin-top: 90px;
+} 
+
+span.card.top,span.card.bottom{
+	display: inline-block;
+	width: 8%;
+}
+
+span.card.left,span.card.right{
+	width: 100%;
+	display: inline-block;
+}
+
+span.card{
+	height: 60px;
+	font-size: 58px;
+	text-align: center;
+	border: 2px #888 solid;
+}
+
+.card.white{
+	background: #fff;
+	color: #000;
+}
+
+.card.black{
+	background: #000;
+	color: #fff;
+}
+
+@keyframes shine{
+	0%{
+	opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+ 
+@-webkit-keyframes shine{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+ 
+.card.newcard{
+	animation: shine 2s 2s;
+	-webkit-animation: shine 2s 2s;
+}
