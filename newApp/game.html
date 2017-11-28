@@ -7,7 +7,45 @@
 <link href="./mdc.css" rel="stylesheet" type="text/css" />
 <link href="./styles.css" rel="stylesheet" type="text/css" />
 
-<meta name="viewport" content="width=100px, initial-scale=1.3, maximum-scale=1.3, user-scalable=0" />
+<script language="x/template" id="templ">
+<div class="mdc-card namecard">
+  <section class="mdc-card__primary">
+    <section class="mdc-card__media"></section>
+    <h1 class="mdc-card__title mdc-card__title--large">{{name}}</h1>
+  </section>
+  <section class="mdc-card__actions">
+    <button class="vote mdc-button--theme-dark mdc-button mdc-button--raised mdc-button--compact mdc-card__action" data-mdc-auto-init="MDCRipple">Vote</button>
+      
+  <div class="slider-wrapper" hidden>
+  <div class="slider mdc-slider mdc-slider--discrete mdc-slider--display-markers" tabindex="0" role="slider"
+         aria-valuemin="-5" aria-valuemax="5" aria-valuenow="0"
+         aria-label="How much?">
+         <div class="mdc-slider__track-container">
+          <div class="mdc-slider__track" hidden></div>
+          <div class="mdc-slider__track-marker-container"></div>
+         </div>
+      <!--div class="mdc-slider__track-container">
+        <div class="mdc-slider__track" hidden></div>
+      </div-->
+      <div class="mdc-slider__thumb-container">
+        <div class="mdc-slider__pin">
+          <span class="mdc-slider__pin-value-marker"></span>
+        </div>
+        <svg class="mdc-slider__thumb" width="21" height="21">
+          <circle cx="10.5" cy="10.5" r="7.875"></circle>
+        </svg>
+        <div class="mdc-slider__focus-ring"></div>
+      </div>
+  </div>
+  </div>
+
+  </section>
+
+</div>
+<div class="namecard_pad"></div>
+</script>
+
+<meta name="viewport" content="width=100, initial-scale=1.3, maximum-scale=1.3, user-scalable=0" />
 
 </head>
 
@@ -25,92 +63,69 @@
 <div id="select">
 <div id="table">
 
-<div class="mdc-card namecard">
-  <section class="mdc-card__primary">
-    <section class="mdc-card__media"></section>
-    <h1 class="mdc-card__title mdc-card__title--large">{{name}}</h1>
-  </section>
-  <section class="mdc-card__actions">
-    <button class="vote mdc-button--theme-dark mdc-button mdc-button--raised mdc-button--compact mdc-card__action" data-mdc-auto-init="MDCRipple">Vote</button>
-  </section>
-</div>
-<div class="namecard_pad"></div>
-
-<div class="mdc-card namecard">
-  <section class="mdc-card__primary">
-    <section class="mdc-card__media"></section>
-    <h1 class="mdc-card__title mdc-card__title--large">{{name}}</h1>
-  </section>
-  <section class="mdc-card__actions">
-    <button class="vote mdc-button--theme-dark mdc-button mdc-button--raised mdc-button--compact mdc-card__action" data-mdc-auto-init="MDCRipple">Vote</button>
-  </section>
-</div>
-<div class="namecard_pad"></div>
-
-
-<div class="mdc-card namecard">
-  <section class="mdc-card__primary">
-    <section class="mdc-card__media"></section>
-    <h1 class="mdc-card__title mdc-card__title--large">{{name}}</h1>
-  </section>
-  <section class="mdc-card__actions">
-    <button class="vote mdc-button--theme-dark mdc-button mdc-button--raised mdc-button--compact mdc-card__action" data-mdc-auto-init="MDCRipple">Vote</button>
-  </section>
-</div>
-<div class="namecard_pad"></div>
-
-
-<div class="mdc-card namecard">
-  <section class="mdc-card__primary">
-    <section class="mdc-card__media"></section>
-    <h1 class="mdc-card__title mdc-card__title--large">{{name}}</h1>
-  </section>
-  <section class="mdc-card__actions">
-    <button class="vote mdc-button--theme-dark mdc-button mdc-button--raised mdc-button--compact mdc-card__action" data-mdc-auto-init="MDCRipple">Vote</button>
-  </section>
-</div>
-<div class="namecard_pad"></div>
-
-
-<div class="mdc-card namecard">
-  <section class="mdc-card__primary">
-    <section class="mdc-card__media"></section>
-    <h1 class="mdc-card__title mdc-card__title--large">{{name}}</h1>
-  </section>
-  <section class="mdc-card__actions">
-    <button class="vote mdc-button--theme-dark mdc-button mdc-button--raised mdc-button--compact mdc-card__action" data-mdc-auto-init="MDCRipple">Vote</button>
-  </section>
-</div>
-<div class="namecard_pad"></div>
-
-
-<div class="mdc-card namecard">
-  <section class="mdc-card__primary">
-    <section class="mdc-card__media"></section>
-    <h1 class="mdc-card__title mdc-card__title--large">{{name}}</h1>
-  </section>
-  <section class="mdc-card__actions">
-    <button class="vote mdc-button--theme-dark mdc-button mdc-button--raised mdc-button--compact mdc-card__action" data-mdc-auto-init="MDCRipple">Vote</button>
-  </section>
-</div>
-<div class="namecard_pad"></div>
-
-
-<div class="mdc-card namecard">
-  <section class="mdc-card__primary">
-    <section class="mdc-card__media"></section>
-    <h1 class="mdc-card__title mdc-card__title--large">{{name}}</h1>
-  </section>
-  <section class="mdc-card__actions">
-    <button class="vote mdc-button--theme-dark mdc-button mdc-button--raised mdc-button--compact mdc-card__action" data-mdc-auto-init="MDCRipple">Vote</button>
-  </section>
-</div>
-<div class="namecard_pad"></div>
 
 </div>
+</div>
+
+<div class="mdc-snackbar"
+     aria-live="assertive"
+     aria-atomic="true"
+     aria-hidden="true">
+  <div class="mdc-snackbar__text"></div>
+  <div class="mdc-snackbar__action-wrapper">
+    <button type="button" class="mdc-snackbar__action-button"></button>
+  </div>
 </div>
 
 <script src="./mdc.js"></script>
-<script>mdc.autoInit();</script>
+<script src="./utils.js"></script>
+
+<script>
+var templ=$("templ").innerHTML;
+var table=$("table");
+var tinner="";
+var names=[];
+for(var i=0;i<9;i++){
+	names[i]="Player_"+i;
+	tinner+=template(templ,{name:names[i]});
+}
+table.innerHTML=tinner;
+
+var snackbar = new mdc.snackbar.MDCSnackbar(document.querySelector('.mdc-snackbar'));
+
+var sliders=[];
+
+var voteButton=document.querySelectorAll('.vote');
+
+for(var i=0;i<voteButton.length;i++){
+	var vote=voteButton[i];
+	vote.playerId=i;
+	//console.dir(vote.parentElement);
+	vote.addEventListener("click",function(e){
+		var i=e.currentTarget.playerId;
+		var actionSection=e.currentTarget.parentElement;
+		actionSection.querySelector('.slider-wrapper').removeAttribute('hidden');
+		actionSection.querySelector('.vote').setAttribute('hidden','');
+		
+		var dataObj = {
+		  message: "Voting "+names[i],
+		  actionText: 'OK',
+		  timeout: 3600*1000,
+		  actionHandler: function(){
+			actionSection.querySelector('.slider-wrapper').setAttribute('hidden','');
+			actionSection.querySelector('.vote').removeAttribute('hidden');
+		  }
+		};
+		snackbar.show(dataObj);
+		
+		if(!sliders[i]){
+			sliders[i] = new mdc.slider.MDCSlider(actionSection.querySelector('.slider'));
+			//sliders[i].listen('MDCSlider:change', function(){ console.log("Value changed to "+sliders[i].value)});
+		}
+	});
+}
+
+mdc.autoInit();
+</script>
 </body>
 </html>

@@ -5,6 +5,10 @@
 	--mdc-theme-background: #f5fafd;/* CMYK 5,0,0,0 */
 }
 
+[hidden]{
+	display:none;
+}
+
 body{
 	background-color: #f5fafd;/* CMYK 5,0,0,0 */
 	margin:0;
@@ -48,4 +52,10 @@ body{
 .vote{
 	background-color:#002d4d;/* CMYK 100,60,20,60 */
 	color: #f5fafd;/* CMYK 5,0,0,0 */
+}
+
+.slider-wrapper{
+	width:170px;
+	margin-left:10px;
+	height:36px;
 }
