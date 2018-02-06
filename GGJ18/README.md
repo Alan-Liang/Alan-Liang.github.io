@@ -35,17 +35,18 @@ There will be 3 characters: Alice, Bob and Eve.
 
 The game plays as follows:
 
-| Time | Alice | Eve | Bob |
-| --: | --: | :--: | :-- |
-| 0 | Alice has a secret string | and Eve has one too. |  |
-| 1 | She want to send a message to Bob |  | And Bob wants to know Alice's string. |
-| 2 | So she throws something -> | to Eve. |  |
-| 3 |  | Eve gets it,modifies it a bit.. |  |
-| 4 |  | ..send it to Bob-> | Gotcha! |
-| 5 |  |  | Bob get the two messages from Alice and Eve. |
-| 6 |  |  | He tries to figure out which is from Alice. |
-| ... | Alice repeatedly sends messages to Bob. | And Eve repeatedly intercepts messages. | Bob can also send Alice messages. |
-| n |  |  | Bob thinks he got the correct string, and send it to the computer. |
+
+| Time |                                   Alice |                   Eve                   | Bob                                                                |
+|-----:|----------------------------------------:|:---------------------------------------:|--------------------------------------------------------------------|
+|    0 |               Alice has a secret string |           and Eve has one too.          |                                                                    |
+|    1 |       She want to send a message to Bob |                                         | And Bob wants to know Alice's string.                              |
+|    2 |              So she throws something -> |                 to Eve.                 |                                                                    |
+|    3 |                                         |     Eve gets it,modifies it a bit..     |                                                                    |
+|    4 |                                         |            ..send it to Bob->           | Gotcha!                                                            |
+|    5 |                                         |                                         | Bob get the two messages from Alice and Eve.                       |
+|    6 |                                         |                                         | He tries to figure out which is from Alice.                        |
+|  ... | Alice repeatedly sends messages to Bob. | And Eve repeatedly intercepts messages. | Bob can also send Alice messages.                                  |
+|    n |                                         |                                         | Bob thinks he got the correct string, and send it to the computer. |
 ## Who is winning?
 - Alice and Bob are winning if and only if Bob gets Alice's message.
 - Eve is winning if and only if Bob gets Eve's message.
