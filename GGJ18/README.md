@@ -1,10 +1,6 @@
 # Welcome
 Welcome to my game for [#GGJ18](https://globalgamejam.org/theme-2018) !
 
-|Test|Test2|
-|---|---|
-|1|2|
-
 In this page, you will learn how to setup and play this game.
 ___
 # Setup
@@ -41,7 +37,7 @@ The game plays as follows:
 
 
 | Time |                                   Alice |                   Eve                   | Bob                                                                |
-| -----| ---------------------------------------- | --------------------------------------- | -------------------------------------------------------------------- |
+| ---: | ---: | :---: | --- |
 |    0 |               Alice has a secret string |           and Eve has one too.          |                                                                    |
 |    1 |       She want to send a message to Bob |                                         | And Bob wants to know Alice's string.                              |
 |    2 |              So she throws something -> |                 to Eve.                 |                                                                    |
