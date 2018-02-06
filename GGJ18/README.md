@@ -1,6 +1,10 @@
 # Welcome
 Welcome to my game for [#GGJ18](https://globalgamejam.org/theme-2018) !
 
+|Test|Test2|
+|---|---|
+|1|2|
+
 In this page, you will learn how to setup and play this game.
 ___
 # Setup
