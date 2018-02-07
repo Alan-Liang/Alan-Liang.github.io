@@ -5,7 +5,7 @@ In this page, you will learn how to setup and play this game.
 ___
 # Setup
 1. Download [Node.js](https://nodejs.org/en/) if you haven't yet.
-2. Download the package from [here](https://keeer-ezs.herokuapp.com/).
+2. Download the package from [here](https://github.com/Alan-Liang/GGJ18/releases).
 3. Unzip and run `npm i` to install dependencies.
 4. If you want to change the default port, Navigate to the end of `server.js` to see `port=20080;` Change `20080` to any port you want.
 5. run `node server.js` or `npm start` to start the server.
