@@ -1,3 +1,9 @@
+if(_paq){
+  for(var i=0;i<_paq.length;i++){
+    if(_paq[i][0]=="setTrackerUrl") _paq[i][1]="https://piwik.keeer.ga/piwik.php";
+  }
+}
+
 /*!!
  * Piwik - free/libre analytics platform
  *
