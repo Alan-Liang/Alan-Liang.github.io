@@ -2,11 +2,26 @@
 <html>
 <head>
 <title>404</title>
+<meta name="theme-color" id="themecolor" content="#ffffff">
 </head>
-<body>
+<body style="transition:background-color 0.3s;">
 <center><a id="hh" href="javascript:history.go(-1)">404</a></center>
 <script>
 document.getElementById('hh').style.cssText = 'display:block;font-family:"Monospace";font-size:'+(window.innerHeight)+'px;';
+var theme=document.getElementById("themecolor");
+function getColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+setInterval(function(){
+  var col=getColor();
+  document.body.style.backgroundColor=col;
+  theme.setAttribute("content",col);
+},300);
 </script>
   </body>
 </html>
