@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Robot</title>
+</head>
+<style type="text/css">
+body{
+	text-align:center;
+	width:100%;
+}
+#container, #controls{
+	display:table;
+}
+#controls .td{
+	width:50px;
+	height:50px;
+	font-size:45px;
+}
+.row{
+	display:table-row;
+}
+.pad{
+	display:table-cell;
+}
+.td{
+	display:table-cell;
+	width:30px;
+	height:30px;
+	border: 1px solid #233666;
+}
+.white{
+	background:#fff;
+	text-align:center;
+	font-size:30px;
+}
+.black{
+	background:#000;
+}
+.grey{
+	background:#aaa;
+}
+</style>
+<body>
+<div id="container"></div>
+<hr />
+<div id="controls">
+<div class="row"><div class="pad"></div><div class="td white" id="up">^</div></div>
+<div class="row"><div class="td white" id="left"><</div><div class="pad white" id="result"></div><div class="td white" id="right">></div></div>
+<div class="row"><div class="pad"></div><div class="td white" id="down">v</div></div>
+</div>
+<h1>Moves:&nbsp;<span id="moves"></span></h1>
+<script type="text/javascript" src="./robot.js"></script>
+<a href="./" >Description</a>
+</body>
+</html>
