@@ -16,7 +16,7 @@
 	</head>  
 	<body>  
 <center><h1><br/>Hello!<br/>
-<div class="bdsharebuttonbox">
+<div class="bdsharebuttonbox" id="shares">
 <a title="分享到新浪微博" class="bds_tsina" href="#" data-cmd="tsina"></a>
 <a title="分享到QQ空间" class="bds_qzone" href="#" data-cmd="qzone"></a>
 <a title="邮件分享" class="bds_mail" href="#" data-cmd="mail"></a>
@@ -49,7 +49,12 @@
 </div>
 <div style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257139152'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1257139152%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div>
 <!--Baidu Share-->
-<script>window._bd_share_config=
+<script>
+var loc=location.href;
+if(loc.indexOf("telegram")>-1){
+window.getElementBtId("shares").style.display="none";
+}else{
+	window._bd_share_config=
 {"common":{
 	"bdSnsKey":{},
 	"bdText":"",
@@ -70,6 +75,7 @@
 		}
 	};
 //load baidu.js
-with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-</body>  
+with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];}</script>
+
+	</body>  
 </html>
